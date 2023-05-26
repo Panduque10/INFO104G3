@@ -33,18 +33,22 @@ export default function Home() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       
-      <Box backgroundColor='#464646' mb="2%">
-        <HamburgerIcon boxSize='4%' color='#8C8C8C' onClick={handleDrawerOpen} cursor="pointer" marginLeft='0.25%' />
+      <Box backgroundColor='#464646' >
+        <HamburgerIcon boxSize='4%' color='#8C8C8C' onClick={handleDrawerOpen} cursor="pointer" marginLeft='0.25%' marginTop='-3.25%' />
         <DrawerComponent isOpen={isDrawerOpen} onClose={handleDrawerClose} />
-
-        <ButtonGroup marginTop='0.66%' paddingLeft='85%' size='md' isAttached variant='ghost'>
-          <Button color='#aCaCaC' backgroundColor='black'  >Torre</Button>
-          <Button color='#aCaCaC' backgroundColor='black'  >Laptop</Button>
+        
+        <ButtonGroup marginTop='0.2%' marginLeft='83%'  isAttached variant='solid' >
+          <Button color='#aCaCaC' backgroundColor='black' height='80%'   >
+            <Image src="/images/torre_logo.png"  alt="" width={55} height={50} />
+          </Button>
+          <Button color='#aCaCaC' backgroundColor='black' height='80%'   >
+            <Image src="/images/notebook_logo.png"  alt="" width={55} height={50} />
+          </Button>
         </ButtonGroup>
 
       </Box>
-      <Box backgroundColor='light gray'>
-        <Divider bg="gray" height="4px" mb="-2" marginTop='-2%'/>
+      <Box backgroundColor='light gray'  >
+        <Divider bg="gray" height="4px"  mb="-0.3%" />
         <div
           style={{
             display: 'flex',
@@ -57,9 +61,10 @@ export default function Home() {
           }}
         >
         
-          <Center height='675px'>
+          <Center height='670px' >
             <Box  mx="55%"/>
-            <Image src="/images/pc.png"  alt="" width={675} height={675} />
+            
+            <Image src="/images/torre.png"  alt="" width={675} height={675} />
           </Center>
         </div>
       </Box>
