@@ -11,6 +11,9 @@ import { Button, ButtonGroup } from '@chakra-ui/react'
 
 const inter = Inter({ subsets: ['latin'] });
 
+
+
+
 const SwitchButton = () => {
   return (
     <Button colorScheme="gray" size="md">
@@ -37,18 +40,22 @@ export default function Home() {
         <HamburgerIcon boxSize='4%' color='#8C8C8C' onClick={handleDrawerOpen} cursor="pointer" marginLeft='0.25%' marginTop='-3.25%' />
         <DrawerComponent isOpen={isDrawerOpen} onClose={handleDrawerClose} />
         
+        
         <ButtonGroup marginTop='0.2%' marginLeft='83%'  isAttached variant='solid' >
-          <Button color='#aCaCaC' backgroundColor='black' height='80%'   >
+          <Button color='#aCaCaC' backgroundColor='black' height='80%' > 
+            
             <Image src="/images/torre_logo.png"  alt="" width={55} height={50} />
           </Button>
+
           <Button color='#aCaCaC' backgroundColor='black' height='80%'   >
             <Image src="/images/notebook_logo.png"  alt="" width={55} height={50} />
           </Button>
         </ButtonGroup>
 
+
       </Box>
       <Box backgroundColor='light gray'  >
-        <Divider bg="gray" height="4px"  mb="-0.3%" />
+        <Divider bg="gray" height="4px"  mb="0.2%" />
         <div
           style={{
             display: 'flex',
@@ -61,11 +68,26 @@ export default function Home() {
           }}
         >
         
-          <Center height='670px' >
-            <Box  mx="55%"/>
+          <Box  marginLeft="25%"/>
+          <Box height='660px' >
             
-            <Image src="/images/torre.png"  alt="" width={675} height={675} />
-          </Center>
+            <Image src="/images/torre.png"  alt="" width={675} height={675} pos='static' />
+            
+            <Button color='#aCaCaC' backgroundColor='transparent' width='4%' height='50%' top='33%' pos='absolute' marginLeft='37%'/>
+
+            <Button color='#aCaCaC' backgroundColor='transparent' width='10%' height='50%' top='33%' pos='absolute' marginLeft='27%'/>
+
+
+            <Button color='#aCaCaC' backgroundColor='transparent' width='13%' height='20%' top='68%' pos='absolute' marginLeft='2.7%'/>
+            <Button color='#aCaCaC' backgroundColor='transparent' width='18%' height='48%' top='20%' pos='absolute' marginLeft='6.5%'/>
+
+            <Button color='#aCaCaC' backgroundColor='transparent' width='23%' height='10%' top='47%' pos='absolute' marginLeft='3.7%'/>
+            <Button color='#aCaCaC' backgroundColor='transparent' width='3%' height='27%' top='20%' pos='absolute' marginLeft='19%'/>
+            <Button color='#aCaCaC' backgroundColor='transparent' width='7.5%' height='17.5%' top='25%' pos='absolute' marginLeft='11%'/>
+            <Button color='#aCaCaC' backgroundColor='transparent' width='4.6%' height='25%' top='16%' pos='absolute' marginLeft='1.9%'/>
+            
+
+          </Box>
         </div>
       </Box>
     </div>

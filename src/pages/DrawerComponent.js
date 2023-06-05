@@ -12,7 +12,7 @@ const DrawerComponent = ({ isOpen, onClose }) => {
               <ListItem>Placa Madre</ListItem>
               <ListItem>Memoria RAM</ListItem>
               <ListItem>Almacenamiento (HDD/SSD)</ListItem>
-              <ListItem>Fuente de energía</ListItem>
+              <ListItem>Fuente de poder</ListItem>
               <ListItem>Tarjeta Gráfica</ListItem>
               <ListItem>Sistema de enfriamiento</ListItem>
             </UnorderedList>
