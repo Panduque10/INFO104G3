@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
@@ -8,9 +8,10 @@ import { Center } from '@chakra-ui/react'
 import DrawerComponent from './DrawerComponent';
 import { Box } from "@chakra-ui/react"
 import { Button, ButtonGroup } from '@chakra-ui/react'
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter } from '@chakra-ui/react';
-const inter = Inter({ subsets: ['latin'] });
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter,  ModalCloseButton} from '@chakra-ui/react';
+import  ButtonMap from './ButtonMap';
 
+const inter = Inter({ subsets: ['latin'] });
 
 
 
@@ -26,6 +27,20 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  const fetchData = async (url) => {
+    const response = await fetch(url);
+    const data = await response.json();
+    setData(data);
+    setIsLoading(false);
+  }
+  useEffect (()=>{
+
+    fetchData('/api/datosComputador')}
+   ,[] );
+
 
   const handleModalClose = () => {
     setIsModalOpen(false);
@@ -33,6 +48,7 @@ export default function Home() {
 
     const handleModalOpen = () => {
     setIsModalOpen(true);
+
   };
   
   const handleDrawerOpen = () => {
@@ -42,6 +58,10 @@ export default function Home() {
   const handleDrawerClose = () => {
     setIsDrawerOpen(false);
   };
+
+  if (isLoading) {
+    return <div>CARGANDO</div>
+  }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -83,30 +103,43 @@ export default function Home() {
             
             <Image src="/images/torre.png"  alt="" width={675} height={675} pos='static' />
             
-            <Button color='#aCaCaC' backgroundColor='transparent' width='4%' height='50%' top='33%' pos='absolute' marginLeft='37%' onClick={handleModalOpen}/>
+          
 
-            <Button color='#aCaCaC' backgroundColor='transparent' width='10%' height='50%' top='33%' pos='absolute' marginLeft='27%' onClick={handleModalOpen}/>
+                
+            <ButtonMap info={data.componentes[1]}/>
+            <ButtonMap info={data.componentes[2]}/>
+            <ButtonMap info={data.componentes[3]}/>
+            <ButtonMap info={data.componentes[4]}/>
+            <ButtonMap info={data.componentes[5]}/>
+            <ButtonMap info={data.componentes[6]}/>
+            <ButtonMap info={data.componentes[0]}/>    
+                
 
 
-            <Button color='#aCaCaC' backgroundColor='transparent' width='13%' height='20%' top='68%' pos='absolute' marginLeft='2.7%' onClick={handleModalOpen}/>
+          
+            
+            {/*
+
+            <Button color='#aCaCaC' backgroundColor='transparent' width='10%' height='50%' top='33%' pos='absolute' marginLeft='27%' onClick={handleModalOpen}/> 
+
+
+            <Button color='#aCaCaC' backgroundColor='transparent' width='13%' height='20%' top='68%' pos='absolute' marginLeft='2.7%' onClick={handleModalOpen}/> 
+
             <Button color='#aCaCaC' backgroundColor='transparent' width='18%' height='48%' top='20%' pos='absolute' marginLeft='6.5%' onClick={handleModalOpen}/>
 
-            <Button color='#aCaCaC' backgroundColor='transparent' width='23%' height='10%' top='47%' pos='absolute' marginLeft='3.7%' onClick={handleModalOpen}/>
-            <Button color='#aCaCaC' backgroundColor='transparent' width='3%' height='27%' top='20%' pos='absolute' marginLeft='19%' onClick={handleModalOpen}/>
+            <Button color='#aCaCaC' backgroundColor='transparent' width='23%' height='10%' top='47%' pos='absolute' marginLeft='3.7%' onClick={handleModalOpen}/> 
+            <Button color='#aCaCaC' backgroundColor='transparent' width='3%' height='27%' top='20%' pos='absolute' marginLeft='19%' onClick={handleModalOpen}/> 
             <Button color='#aCaCaC' backgroundColor='transparent' width='7.5%' height='17.5%' top='25%' pos='absolute' marginLeft='11%' onClick={handleModalOpen}/>
-            <Button color='#aCaCaC' backgroundColor='transparent' width='4.6%' height='25%' top='16%' pos='absolute' marginLeft='1.9%' onClick={handleModalOpen}/>
+            <Button color='#aCaCaC' backgroundColor='transparent' width='4.6%' height='25%' top='16%' pos='absolute' marginLeft='1.9%' onClick={handleModalOpen}/> 
+
             
+            
+            */}
 
           </Box>
-          <Modal isOpen={isModalOpen} onClose={handleModalClose}>
-          <ModalOverlay />
-          <ModalContent>
-          <ModalHeader></ModalHeader>
-          <ModalBody>{modalContent}</ModalBody>
-          <ModalFooter>
-          </ModalFooter>
-          </ModalContent>
-          </Modal>
+
+          
+      
         </div>
       </Box>
     </div>
