@@ -3,7 +3,7 @@ import { Drawer, DrawerBody, DrawerOverlay, DrawerContent, UnorderedList, ListIt
 const DrawerComponent = ({ isOpen, onClose }) => {
   return (
     <>
-      <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
+      <Drawer placement="left"  onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerBody>

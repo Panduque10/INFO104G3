@@ -99,7 +99,7 @@ export default function Home() {
         >
         
           <Box  marginLeft="25%"/>
-          <Box height='660px' >
+          <Box  height='660px' >
             
             <Image src="/images/torre.png"  alt="" width={675} height={675} pos='static' />
             
@@ -107,7 +107,7 @@ export default function Home() {
 
                 
             <ButtonMap info={data.componentes[1]}/>
-            <ButtonMap info={data.componentes[2]}/>
+            <ButtonMap info={data.componentes[2]}/> 
             <ButtonMap info={data.componentes[3]}/>
             <ButtonMap info={data.componentes[4]}/>
             <ButtonMap info={data.componentes[5]}/>
