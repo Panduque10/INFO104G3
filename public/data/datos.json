@@ -70,7 +70,7 @@
             "top":"16%",
             "marginLeft":"1.9%",
             "detailsTxt": "El sistema de enfriamiento de un PC es un conjunto de componentes y tecnologías diseñados para regular y disipar el calor generado por los componentes internos de una computadora. La refrigeración adecuada es esencial para mantener las temperaturas de funcionamiento dentro de límites seguros y prevenir el sobrecalentamiento, lo que podría dañar los componentes y afectar el rendimiento del sistema.",
-            "detailsImg": ["/images/componentes/sis1","/images/componentes/sis2.jpg","/images/componentes/sis3.jpg"]
+            "detailsImg": ["/images/componentes/sis1.jpg","/images/componentes/sis2.jpg","/images/componentes/sis3.jpg"]
         }
     ]
 }
