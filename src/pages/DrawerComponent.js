@@ -1,20 +1,48 @@
-import { Drawer, DrawerBody, DrawerOverlay, DrawerContent, UnorderedList, ListItem } from '@chakra-ui/react';
+import { Drawer, DrawerBody, DrawerOverlay, DrawerContent, Button, UnorderedList, ListItem } from '@chakra-ui/react';
 
 const DrawerComponent = ({ isOpen, onClose }) => {
   return (
     <>
-      <Drawer placement="left"  onClose={onClose} isOpen={isOpen}>
+      <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerBody>
             <UnorderedList>
-              <ListItem>Procesador</ListItem>
-              <ListItem>Placa Madre</ListItem>
-              <ListItem>Memoria RAM</ListItem>
-              <ListItem>Almacenamiento (HDD/SSD)</ListItem>
-              <ListItem>Fuente de poder</ListItem>
-              <ListItem>Tarjeta Gráfica</ListItem>
-              <ListItem>Sistema de enfriamiento</ListItem>
+              <ListItem>
+                <Button variant="ghost" onClick={() => console.log('Procesador')}>
+                  Procesador
+                </Button>
+              </ListItem>
+              <ListItem>
+                <Button variant="ghost" onClick={() => console.log('Placa Madre')}>
+                  Placa Madre
+                </Button>
+              </ListItem>
+              <ListItem>
+                <Button variant="ghost" onClick={() => console.log('Memoria RAM')}>
+                  Memoria RAM
+                </Button>
+              </ListItem>
+              <ListItem>
+                <Button variant="ghost" onClick={() => console.log('Almacenamiento (HDD/SSD)')}>
+                  Almacenamiento (HDD/SSD)
+                </Button>
+              </ListItem>
+              <ListItem>
+                <Button variant="ghost" onClick={() => console.log('Fuente de poder')}>
+                  Fuente de poder
+                </Button>
+              </ListItem>
+              <ListItem>
+                <Button variant="ghost" onClick={() => console.log('Tarjeta Gráfica')}>
+                  Tarjeta Gráfica
+                </Button>
+              </ListItem>
+              <ListItem>
+                <Button variant="ghost" onClick={() => console.log('Sistema de enfriamiento')}>
+                  Sistema de enfriamiento
+                </Button>
+              </ListItem>
             </UnorderedList>
           </DrawerBody>
         </DrawerContent>

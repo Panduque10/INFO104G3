@@ -10,7 +10,7 @@
             "top":"25%",
             "marginLeft":"11%",
             "detailsTxt": "La CPU es el núcleo del procesamiento en un computador. Realiza las operaciones aritméticas, lógicas y de control necesarias para ejecutar programas, coordinar el funcionamiento de los componentes y garantizar el correcto flujo de datos dentro del sistema.",
-            "detailsImg": ["/images/componentes/proce1.jpg","/images/componentes/proce2.jpg","/images/componentes/proce3.jpg"]
+            "detailsImg": ["/images/componentes/proc1.jpg","/images/componentes/proce2.jpg","/images/componentes/proce3.jpg"]
         },
         {
             "nombre": "Placa madre",
@@ -30,7 +30,7 @@
             "top":"20%",
             "marginLeft":"19%",
             "detailsTxt":"La memoria RAM es un tipo de memoria con un almacenamiento volátil, haciendo que la información que este componente almacena se pierda cuando el computador se apague. También el tipo de acceso a los datos es de acceso aleatorio, esto da a entender que no afecta la distancia física en la demora para acceder a la información. La función de la memoria RAM es almacenar datos y programas de manera temporal, quedando en un segundo plano para que la CPU tengo un acceso rápido a estos.",
-            "detailsImg": ["/images/componentes/ram1.webp","/images/componentes/ram2.jpg","/images/componentes/ram3.jpg"]
+            "detailsImg": ["/images/componentes/ramm1.jpg","/images/componentes/ram2.webp","/images/componentes/ram3.jpg"]
         },
         {
             "nombre": "Almacenamiento (HDD/SDD)",
@@ -50,7 +50,7 @@
             "top":"68%",
             "marginLeft":"2.7%",
             "detailsTxt": " Proporciona la energía eléctrica necesaria para el funcionamiento de todos los componentes del computador. Debe tener la capacidad adecuada para alimentar los componentes y cumplir con los requisitos de potencia.",
-            "detailsImg": ["/images/componentes/fuente1.png","/images/componentes/fuente2.jpg","/images/componentes/fuente3.jpg"]
+            "detailsImg": ["/images/componentes/fuent1.png","/images/componentes/fuente2.jpg","/images/componentes/fuente3.jpg"]
         },
         {
             "nombre": "Tarjeta gráfica",
@@ -60,7 +60,7 @@
             "top":"47%",
             "marginLeft":"3.7%",
             "detailsTxt": "Es responsable de procesar y renderizar los gráficos, imágenes y videos en el monitor. Las tarjetas gráficas dedicadas son especialmente importantes para aplicaciones y juegos que requieren un alto rendimiento gráfico.",
-            "detailsImg": ["/images/componentes/tarjeta1.jpg","/images/componentes/tarjeta2.jpg","/images/componentes/tarjeta3.jpg"]
+            "detailsImg": ["/images/componentes/tarjet1.png","/images/componentes/tarjeta2.jpg","/images/componentes/tarjeta3.jpg"]
         },
         {
             "nombre": "Sistema de enfriamiento",
@@ -70,7 +70,7 @@
             "top":"16%",
             "marginLeft":"1.9%",
             "detailsTxt": "El sistema de enfriamiento de un PC es un conjunto de componentes y tecnologías diseñados para regular y disipar el calor generado por los componentes internos de una computadora. La refrigeración adecuada es esencial para mantener las temperaturas de funcionamiento dentro de límites seguros y prevenir el sobrecalentamiento, lo que podría dañar los componentes y afectar el rendimiento del sistema.",
-            "detailsImg": ["/images/componentes/sis1.jpg","/images/componentes/sis2.jpg","/images/componentes/sis3.jpg"]
+            "detailsImg": ["/images/componentes/siste1.jpg","/images/componentes/sist2.jpg","/images/componentes/siste3.jpg"]
         }
     ]
 }

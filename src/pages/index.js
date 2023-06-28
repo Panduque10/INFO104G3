@@ -10,7 +10,9 @@ import { Box } from "@chakra-ui/react"
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter,  ModalCloseButton} from '@chakra-ui/react';
 import  ButtonMap from './ButtonMap';
-
+import { Text } from '@chakra-ui/react'
+import { Switch } from '@chakra-ui/react'
+import { Stack, HStack, VStack } from '@chakra-ui/react'
 const inter = Inter({ subsets: ['latin'] });
 
 
@@ -67,10 +69,21 @@ export default function Home() {
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       
       <Box backgroundColor='#464646' >
-        <HamburgerIcon boxSize='4%' color='#8C8C8C' onClick={handleDrawerOpen} cursor="pointer" marginLeft='0.25%' marginTop='-3.25%' />
+      
+      <Stack align='center' direction='row' marginTop='0.2%' marginLeft='%'>
+        <HamburgerIcon boxSize='4%' color='#8C8C8C' onClick={handleDrawerOpen} cursor="pointer" marginLeft='0.25%' marginTop='' />
         <DrawerComponent isOpen={isDrawerOpen} onClose={handleDrawerClose} />
         
-        
+        <Box width='30%'/>
+        <Text fontSize='2xl' marginLeft='%'  marginTop='-3.5%' color='#C0C0C0' backgroundColor='#151515'> Arquitectura de un computador de torre </Text>
+      
+        <Box width='22%'/>
+        <Image src="/images/torre_logo.png" marginLeft='' alt="" width={55} height={50} />
+        <Switch size='lg' colorScheme='red' position='relative' type='checkbox'/>
+        <Image src="/images/notebook_logo.png"  alt="" width={55} height={50} />
+      </Stack>
+
+      {/*
         <ButtonGroup marginTop='0.2%' marginLeft='83%'  isAttached variant='solid' >
           <Button color='#aCaCaC' backgroundColor='black' height='80%' > 
             
@@ -82,7 +95,7 @@ export default function Home() {
           </Button>
         </ButtonGroup>
 
-
+*/}
       </Box>
       <Box backgroundColor='light gray'  >
         <Divider bg="gray" height="4px"  mb="0.2%" />
