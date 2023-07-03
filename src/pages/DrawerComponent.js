@@ -1,6 +1,18 @@
 import { Drawer, DrawerBody, DrawerOverlay, DrawerContent, Button, UnorderedList, ListItem } from '@chakra-ui/react';
+import Popup from './Popup';
+import { useState, useEffect } from 'react';
+
+import data from '../../public/data/datos.json';
 
 const DrawerComponent = ({ isOpen, onClose }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [componenteActual, setComponenteActual] = useState(null);
+
+  const handleModalOpen = (componentName) => {
+    setIsModalOpen(true);
+    setComponenteActual(componentName);
+  };
+
   return (
     <>
       <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
@@ -8,45 +20,25 @@ const DrawerComponent = ({ isOpen, onClose }) => {
         <DrawerContent>
           <DrawerBody>
             <UnorderedList>
-              <ListItem>
-                <Button variant="ghost" onClick={() => console.log('Procesador')}>
-                  Procesador
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button variant="ghost" onClick={() => console.log('Placa Madre')}>
-                  Placa Madre
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button variant="ghost" onClick={() => console.log('Memoria RAM')}>
-                  Memoria RAM
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button variant="ghost" onClick={() => console.log('Almacenamiento (HDD/SSD)')}>
-                  Almacenamiento (HDD/SSD)
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button variant="ghost" onClick={() => console.log('Fuente de poder')}>
-                  Fuente de poder
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button variant="ghost" onClick={() => console.log('Tarjeta Gráfica')}>
-                  Tarjeta Gráfica
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button variant="ghost" onClick={() => console.log('Sistema de enfriamiento')}>
-                  Sistema de enfriamiento
-                </Button>
-              </ListItem>
+              {data.componentes.map((component) => (
+                <ListItem key={component.nombre}>
+                  <Button variant="ghost" onClick={() => handleModalOpen(component.nombre)}>
+                    {component.nombre}
+                  </Button>
+                </ListItem>
+              ))}
             </UnorderedList>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
+      {data.componentes.map((component) => (
+        <Popup
+          key={component.nombre}
+          buttonInfo={component}
+          isModalOpen={isModalOpen && component.nombre === componenteActual}
+          handleModalClose={() => setIsModalOpen(false)}
+        />
+      ))}
     </>
   );
 };
