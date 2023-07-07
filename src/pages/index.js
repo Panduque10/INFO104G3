@@ -27,6 +27,8 @@ const SwitchButton = () => {
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [architecture, setArchitecture] = useState(false);
+
   const [modalContent, setModalContent] = useState(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [data, setData] = useState(null);
@@ -39,9 +41,13 @@ export default function Home() {
     setIsLoading(false);
   }
   useEffect (()=>{
+    architecture ?
+    fetchData('/api/datosComputador?tipo=lp'):
+    fetchData('/api/datosComputador?tipo=pc')
+    
+  }
+   ,[architecture] );
 
-    fetchData('/api/datosComputador')}
-   ,[] );
 
 
   const handleModalClose = () => {
@@ -75,27 +81,17 @@ export default function Home() {
         <DrawerComponent isOpen={isDrawerOpen} onClose={handleDrawerClose} />
         
         <Box width='30%'/>
-        <Text fontSize='2xl' marginLeft='%'  marginTop='-3.5%' color='#C0C0C0' backgroundColor='#151515'> Arquitectura de un computador de torre </Text>
+        <Text fontSize='2xl' marginLeft='%'  marginTop='-3.5%' color='#C0C0C0' backgroundColor='#151515'> Arquitectura de {architecture ?   "una laptop":"un computador de torre"} </Text>
       
         <Box width='22%'/>
         <Image src="/images/torre_logo.png" marginLeft='' alt="" width={55} height={50} />
-        <Switch size='lg' colorScheme='red' position='relative' type='checkbox'/>
+
+        <Switch size='lg' colorScheme='red' position='relative' type='checkbox' onChange={() => setArchitecture(!architecture)}/>
+
         <Image src="/images/notebook_logo.png"  alt="" width={55} height={50} />
       </Stack>
 
-      {/*
-        <ButtonGroup marginTop='0.2%' marginLeft='83%'  isAttached variant='solid' >
-          <Button color='#aCaCaC' backgroundColor='black' height='80%' > 
-            
-            <Image src="/images/torre_logo.png"  alt="" width={55} height={50} />
-          </Button>
 
-          <Button color='#aCaCaC' backgroundColor='black' height='80%'   >
-            <Image src="/images/notebook_logo.png"  alt="" width={55} height={50} />
-          </Button>
-        </ButtonGroup>
-
-*/}
       </Box>
       <Box backgroundColor='light gray'  >
         <Divider bg="gray" height="4px"  mb="0.2%" />
@@ -114,7 +110,13 @@ export default function Home() {
           <Box  marginLeft="25%"/>
           <Box  height='660px' >
             
-            <Image src="/images/torre.png"  alt="" width={675} height={675} pos='static' />
+            {
+              architecture ?
+
+              <Image src="/images/portatil.png"  alt="" width={970} height={970} pos='static' />:
+              <Image src="/images/torre.png"  alt="" width={675} height={675} pos='static' /> 
+
+              }
             
           
 
@@ -131,24 +133,7 @@ export default function Home() {
 
           
             
-            {/*
-
-            <Button color='#aCaCaC' backgroundColor='transparent' width='10%' height='50%' top='33%' pos='absolute' marginLeft='27%' onClick={handleModalOpen}/> 
-
-
-            <Button color='#aCaCaC' backgroundColor='transparent' width='13%' height='20%' top='68%' pos='absolute' marginLeft='2.7%' onClick={handleModalOpen}/> 
-
-            <Button color='#aCaCaC' backgroundColor='transparent' width='18%' height='48%' top='20%' pos='absolute' marginLeft='6.5%' onClick={handleModalOpen}/>
-
-            <Button color='#aCaCaC' backgroundColor='transparent' width='23%' height='10%' top='47%' pos='absolute' marginLeft='3.7%' onClick={handleModalOpen}/> 
-            <Button color='#aCaCaC' backgroundColor='transparent' width='3%' height='27%' top='20%' pos='absolute' marginLeft='19%' onClick={handleModalOpen}/> 
-            <Button color='#aCaCaC' backgroundColor='transparent' width='7.5%' height='17.5%' top='25%' pos='absolute' marginLeft='11%' onClick={handleModalOpen}/>
-            <Button color='#aCaCaC' backgroundColor='transparent' width='4.6%' height='25%' top='16%' pos='absolute' marginLeft='1.9%' onClick={handleModalOpen}/> 
-
-            
-            
-            */}
-
+      
           </Box>
 
           

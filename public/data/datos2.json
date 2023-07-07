@@ -1,0 +1,76 @@
+{
+    "title": "LP",
+    "img": null, 
+    "componentes": [
+        {
+            "nombre": "Procesador",
+            "orden": 1,
+            "width":"5%",
+            "height":"12%",
+            "top":"42%",
+            "marginLeft":"17%",
+            "detailsTxt": "La CPU es el núcleo del procesamiento en un computador. Realiza las operaciones aritméticas, lógicas y de control necesarias para ejecutar programas, coordinar el funcionamiento de los componentes y garantizar el correcto flujo de datos dentro del sistema.",
+            "detailsImg": ["/images/componentes/proc1.jpg","/images/componentes/proce2.jpg","/images/componentes/proce3.jpg"]
+        },
+        {
+            "nombre": "Placa madre",
+            "orden": 2, 
+            "width":"50%",
+            "height":"60%",
+            "top":"2%",
+            "marginLeft":"13.5%",
+            "detailsTxt": "Es el componente principal que conecta y comunica entre sí a todos los demás componentes del computador. Contiene los puertos, ranuras y circuitos necesarios para la interconexión de la CPU, la RAM, el almacenamiento, las tarjetas de expansión y otros dispositivos. Titulo: Tarjeta gráfica (GPU)",
+            "detailsImg": ["/images/componentes/placa1.jpg","/images/componentes/placa2.jpg","/images/componentes/placa3.webp"]
+        },
+        {
+            "nombre": "Memoria RAM",
+            "orden": 3, 
+            "width":"13%",
+            "height":"30%",
+            "top":"26%",
+            "marginLeft":"31.5%",
+            "detailsTxt":"La memoria RAM es un tipo de memoria con un almacenamiento volátil, haciendo que la información que este componente almacena se pierda cuando el computador se apague. También el tipo de acceso a los datos es de acceso aleatorio, esto da a entender que no afecta la distancia física en la demora para acceder a la información. La función de la memoria RAM es almacenar datos y programas de manera temporal, quedando en un segundo plano para que la CPU tengo un acceso rápido a estos.",
+            "detailsImg": ["/images/componentes/ramm1.jpg","/images/componentes/ram2.webp","/images/componentes/ram3.jpg"]
+        },
+        {
+            "nombre": "Almacenamiento (HDD/SDD)",
+            "orden": 4, 
+            "width":"13%",
+            "height":"41%",
+            "top":"55%",
+            "marginLeft":"47.5%",
+            "detailsTxt": "Los dispositivos de almacenamiento tienen la función de almacenar información y programas de manera permanente. Se dividen en dos tipos, los disco duros tradicionales (HDD) y las unidades de estado solido (SSD). Los primeros tienen un precio más accesible en relación a la cantidad de almacenamiento que ofrecen y su información es guardada en discos magneticos.",
+            "detailsImg": ["/images/componentes/almac1.webp","/images/componentes/almac2.jpg","/images/componentes/almac3.jpg"]
+        },
+        {
+            "nombre": "Fuente de poder",
+            "orden": 5, 
+            "width":"32%",
+            "height":"37%",
+            "top":"58%",
+            "marginLeft":"4.5%",
+            "detailsTxt": " Proporciona la energía eléctrica necesaria para el funcionamiento de todos los componentes del computador. Debe tener la capacidad adecuada para alimentar los componentes y cumplir con los requisitos de potencia.",
+            "detailsImg": ["/images/componentes/fuent1.png","/images/componentes/fuente2.jpg","/images/componentes/fuente3.jpg"]
+        },
+        {
+            "nombre": "Tarjeta gráfica",
+            "orden": 6, 
+            "width":"11.5%",
+            "height":"36%",
+            "top":"6%",
+            "marginLeft":"20%",
+            "detailsTxt": "Es responsable de procesar y renderizar los gráficos, imágenes y videos en el monitor. Las tarjetas gráficas dedicadas son especialmente importantes para aplicaciones y juegos que requieren un alto rendimiento gráfico.",
+            "detailsImg": ["/images/componentes/tarjet1.png","/images/componentes/tarjeta2.jpg","/images/componentes/tarjeta3.jpg"]
+        },
+        {
+            "nombre": "Sistema de enfriamiento",
+            "orden": 7, 
+            "width":"56%",
+            "height":"33%",
+            "top":"12%",
+            "marginLeft":"4%",
+            "detailsTxt": "El sistema de enfriamiento de un PC es un conjunto de componentes y tecnologías diseñados para regular y disipar el calor generado por los componentes internos de una computadora. La refrigeración adecuada es esencial para mantener las temperaturas de funcionamiento dentro de límites seguros y prevenir el sobrecalentamiento, lo que podría dañar los componentes y afectar el rendimiento del sistema.",
+            "detailsImg": ["/images/componentes/siste1.jpg","/images/componentes/sist2.jpg","/images/componentes/siste3.jpg"]
+        }
+    ]
+}
